@@ -11,7 +11,9 @@ interface NavLinksProps {
 
 const NavLinks = ({ label, href, isActive }: NavLinksProps) => {
     return (
-      <Link
+    <>
+    {/* Desktop Navbar Items */}
+    <Link
         href={href}
         className={clsx(
           // Base styles - equal width container
@@ -34,10 +36,12 @@ const NavLinks = ({ label, href, isActive }: NavLinksProps) => {
             'hover:scale-102'
           ]
         )}
-      >
-        <span className="relative z-10">{label}</span>
-        
-      </Link>
+    >
+    <span className="relative z-10">{label}</span>
+    </Link>
+
+    {/* Mobile Navbar Items */}
+    </>
     );
   };
   
