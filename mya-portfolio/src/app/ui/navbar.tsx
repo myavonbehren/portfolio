@@ -1,38 +1,22 @@
-'use client';
-
-import { usePathname } from 'next/navigation';
-import NavLinks from './navlinks';
+import Link from 'next/link'
+import React from 'react'
 
 const Navbar = () => {
-  const pathname = usePathname();
-
-  const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'About', href: '#about' },
-    { label: 'Contact', href: '#contact' }
-  ];
-
   return (
-    <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
-
- {/* Desktop Navbar */}
-      <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-full px-2 py-2 shadow-lg hidden md:flex">
-        <ul className="flex items-center space-x-1">
-          {navItems.map((item) => (
-            <NavLinks
-              key={item.label}
-              label={item.label}
-              href={item.href}
-              isActive={pathname === item.href}
-            />
-          ))}
-      </ul>
-      </div>
-
-
+    <>
+    <nav className='
+    w-full fixed top-6 px-5 lg:px-8 xl:px-[8%] py-4
+    flex items-center justify-between
+    '>
+        <ul>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="#projects">Projects</Link></li>
+            <li><Link href="#about">About</Link></li>
+            <li><Link href="#contact">Contact</Link></li>
+        </ul>
     </nav>
-  );
-};
+    </>
+  )
+}
 
-export default Navbar;
+export default Navbar
