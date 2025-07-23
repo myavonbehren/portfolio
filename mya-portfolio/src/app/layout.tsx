@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${hanken_grotesk.className} ${hanken_grotesk.className} antialiased`}>
         <Navbar />
-        {children}
+            {children}
         <Footer />
       </body>
     </html>
