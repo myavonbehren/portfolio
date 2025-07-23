@@ -3,6 +3,16 @@
 :root {
   --background: #FAF9F6FF;
   --foreground: #0B1215FF;
+  --boxBg: #f3f3f3;
+  --activeBg: #292929;
+  --text: #000;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --boxBg: #1f1e1d;
+  --activeBg: #292929;
+  --text: #fff;
 }
 
 body {
