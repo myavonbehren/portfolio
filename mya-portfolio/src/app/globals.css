@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FAF9F6FF;
+  --foreground: #0B1215FF;
 }
 
 body {
@@ -10,3 +10,45 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.fluid-xxxl {
+  font-size: calc(50px + 23 * ((100vw - 320px) / 680));
+  line-height: calc(55px + 35 * ((100vw - 320px) / 680));
+}
+
+.fluid-xxl {
+  font-size: calc(30px + 5 * ((100vw - 320px) / 680));
+  line-height: calc(65px * ((100vw - 320px) / 680));
+}
+
+.fluid-xl {
+  font-size: calc(25px + 5 * ((100vw - 320px) / 680));
+  line-height: calc(45px * ((100vw - 320px) / 680));
+}
+
+.fluid-l {
+  font-size: calc(20px + 5 * ((100vw - 320px) / 680));
+  line-height: calc(40px * ((100vw - 320px) / 680));
+}
+
+.fluid-m {
+  font-size: calc(18px + 2 * ((100vw - 320px) / 680));
+  line-height: calc(26px * ((100vw - 320px) / 680));
+}
+
+
+.fluid-s {
+  font-size: calc(16px + 2 * ((100vw - 320px) / 680));
+  line-height: calc(20px * ((100vw - 320px) / 680));
+}
+
+.fluid-xs {
+  font-size: calc(12px * ((100vw - 320px) / 680));
+  line-height: calc(15px * ((100vw - 320px) / 680));
+}
+
+.bg-gradient {
+  background: radial-gradient(85.01% 80.94% at 50% 50%, var(--Color-Palette-Light-White, rgba(250, 249, 246, 0.40)) 0%, var(--Color-Palette-Light-Pearl, rgba(231, 223, 198, 0.40)) 27.03%, rgba(208, 197, 243, 0.40) 59.87%, rgba(157, 134, 239, 0.40) 87.22%, var(--Color-Palette-Light-Majorelle-Blue, rgba(98, 60, 234, 0.40)) 100%), linear-gradient(0deg, var(--Color-Palette-Light-White, #FAF9F6) 0%, #E9F1F7 19.23%, #E7DFC6 44.71%, #E7DFC6 55.29%, #E9F1F7 76.44%, var(--Color-Palette-Light-White, #FAF9F6) 100%), var(--Color-Palette-Light-White, #FAF9F6);}
+
+/* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+*/
