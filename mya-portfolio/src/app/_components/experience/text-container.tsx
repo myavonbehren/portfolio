@@ -15,16 +15,22 @@ const description = (description: string) => {
 }
 
 const TextContainer = async () => {
-    const works = await prisma.works.findMany()
+    const works = await prisma.works.findMany({
+        orderBy: {
+            endDate: 'desc'
+        }
+    })
 
     return (
         <>
             {works.map((work) => (
-                <div className="inline-flex flex-col gap-2">
-                    <p>{formatDate(work.startDate)} - {formatDate(work.endDate)}</p>
-                    <p>{work.title}</p>
-                    <p>{work.company}</p>
-                    {description(work.description)}
+                <div className="inline-flex flex-col pt-2.5 pb-2.5 px-6">
+                    <div className="font-semibold">
+                    <p className="fluid-s">{formatDate(work.startDate)} - {formatDate(work.endDate)}</p>
+                    <p className="fluid-m">{work.title}</p>
+                    <p className="fluid-s">{work.company}</p>
+                    </div>
+                    <p className="fluid-s">{description(work.description)}</p>
                 </div>
             ))}
         </>
