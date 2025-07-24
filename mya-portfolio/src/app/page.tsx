@@ -7,6 +7,12 @@ export default function Home() {
   return (
     <main>
         <Hero></Hero>
+        <div className="bg-gradient">
+          <Container>
+            <Experience></Experience>
+            <Projects></Projects>
+          </Container>
+        </div>
     </main>
   );
 }
