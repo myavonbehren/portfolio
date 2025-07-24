@@ -1,5 +1,5 @@
 import Hero from "./_components/hero";
-import Experience from "./_components/experience";
+import Experience from "./_components/experience/experience";
 import Projects from "./_components/projects";
 import Container from "./_components/container";
 
