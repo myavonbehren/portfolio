@@ -5,11 +5,11 @@ import { FiMail } from "react-icons/fi";
 
 const Hero = () => {
   return (
-    <div className="h-screen w-screen flex flex-col items-center justify-center gap-2 bg-gradient-hero">
-        <h2 className="font-bold fluid-xl">Hello, I'm Mya 👋🏽</h2>
+    <section className="flex flex-col items-center justify-center gap-2 bg-gradient-hero h-screen">
+        <h2 className="font-bold fluid-xl text-center">Hello, I'm Mya 👋🏽</h2>
         <h1 className="font-bold uppercase fluid-xxxl text-center">Full Stack <br /> Developer</h1>
-        <h3 className="font-bold fluid-l">Based near Asheville, NC</h3>
-        <div className="flex items-center gap-3 pt-3">
+        <h3 className="font-bold fluid-l text-center">Based near Asheville, NC</h3>
+        <div className="flex items-center gap-3 pt-3 justify-center">
             <button className="btn-base px-5 py-2.5 font-bold transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
                 Resume
             </button>
@@ -33,7 +33,7 @@ const Hero = () => {
                 <FiMail className="w-6 h-6"/>
             </a>                
         </div>
-    </div>
+    </section>
   )
 }
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { hanken_grotesk } from '@/app/ui/font';
-import Navbar from '@/app/ui/navbar';
-import Footer from '@/app/ui/footer';
+import { hanken_grotesk } from '@/app/_components/font';
+import Navbar from '@/app/_components/navbar';
+import Footer from '@/app/_components/footer';
 import "./globals.css";
 
 

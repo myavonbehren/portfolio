@@ -1,14 +1,12 @@
-import Hero from "./ui/hero";
-import Experience from "./ui/experience";
-import Projects from "./ui/projects";
+import Hero from "./_components/hero";
+import Experience from "./_components/experience";
+import Projects from "./_components/projects";
+import Container from "./_components/container";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <Hero></Hero>
-      <div className="bg-gradient">
-        <Experience></Experience><Projects></Projects>
-      </div>
+    <main>
+        <Hero></Hero>
     </main>
   );
 }
