@@ -36,6 +36,7 @@ const Navbar = () => {
         {/* Desktop Navigation - Centered */}
         <div className='hidden md:flex items-center gap-7 lg:gap-11 rounded-full px-15 py-4 shadow-lg bg-white/10 backdrop-blur-sm'>
             <Link href="/">Home</Link>
+            <Link href="#experience">Experience</Link>
             <Link href="#projects">Projects</Link>
             <Link href="#about">About</Link>
             <Link href="#contact">Contact</Link>
@@ -60,6 +61,7 @@ const Navbar = () => {
             </div>
 
             <Link href="/" onClick={closeSideMenu}>Home</Link>
+            <Link href="#experience" onClick={closeSideMenu}>Experience</Link>
             <Link href="#projects" onClick={closeSideMenu}>Projects</Link>
             <Link href="#about" onClick={closeSideMenu}>About</Link>
             <Link href="#contact" onClick={closeSideMenu}>Contact</Link>
