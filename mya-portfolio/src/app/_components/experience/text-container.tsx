@@ -1,8 +1,18 @@
 import prisma from "@/app/lib/db"
 
-const formatDate = (date: Date) => {
+const formatDate = (date?: Date | null) => {
+    if (!date) {
+        return "Present"
+    }
+
     return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })
 }   
+
+const description = (description: string) => {
+    return description.split('*').map((line, index) => (
+        <p key={index}>• {line}</p>
+    ))
+}
 
 const TextContainer = async () => {
     const works = await prisma.works.findMany()
@@ -14,7 +24,7 @@ const TextContainer = async () => {
                     <p>{formatDate(work.startDate)} - {formatDate(work.endDate)}</p>
                     <p>{work.title}</p>
                     <p>{work.company}</p>
-                    <p>{work.description}</p>
+                    {description(work.description)}
                 </div>
             ))}
         </>
