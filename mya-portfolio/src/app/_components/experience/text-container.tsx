@@ -1,4 +1,6 @@
 import prisma from "@/app/lib/db"
+import Dpulogo from "../svg/dpulogo"
+import Nulogo from "../svg/nulogo"
 
 const formatDate = (date?: Date | null) => {
     if (!date) {
@@ -10,11 +12,15 @@ const formatDate = (date?: Date | null) => {
 
 const description = (description: string) => {
     return description.split('*').map((line, index) => (
-        <p key={index}>• {line}</p>
+        <p key={index} className="fluid-s pl-2">• {line}</p>
     ))
 }
 
-const TextContainer = async () => {
+interface Type {
+    string: string;
+}
+
+const TextContainer = async (type: Type) => {
     const works = await prisma.works.findMany({
         orderBy: {
             endDate: 'desc'
@@ -23,16 +29,29 @@ const TextContainer = async () => {
 
     return (
         <>
+        {type.string == "work" ? (
+        <div className="px-11 py-12">
             {works.map((work) => (
-                <div className="inline-flex flex-col pt-2.5 pb-2.5 px-6">
-                    <div className="font-semibold">
-                    <p className="fluid-s">{formatDate(work.startDate)} - {formatDate(work.endDate)}</p>
-                    <p className="fluid-m">{work.title}</p>
-                    <p className="fluid-s">{work.company}</p>
+                <div className="inline-flex flex-row items-center justify-center gap-4 pb-5" key={work.id}>
+                    <div className="inline-flex flex-row items-center justify-center btn-base p-5">
+                        {work.icon == "dpulogo" ? <Dpulogo className="w-6 h-6"></Dpulogo> : <Nulogo className="w-6 h-6"></Nulogo>}
                     </div>
-                    <p className="fluid-s">{description(work.description)}</p>
+                    <div className="inline-flex flex-col pb-1">
+                        <div className="font-semibold">
+                        {formatDate(work.startDate)} - {formatDate(work.endDate)}
+                        <p className="fluid-m">{work.title}</p>
+                        <p className="fluid-s">{work.company}</p>
+                        </div>
+                        {description(work.description)}
+                    </div>
                 </div>
             ))}
+        </div>
+        ) : (
+            <div>
+                <h1>Education</h1>
+            </div>
+        )}
         </>
     )
 }
