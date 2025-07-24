@@ -1,4 +1,4 @@
-const experience = [
+export const experience = [
     {
         startDate: '2025-04-01',
         endDate: '2025-07-01',
@@ -33,7 +33,7 @@ const experience = [
     }
   ]
   
-const education = [
+export const education = [
     {
         startDate: '2021-08-01',
         endDate: '2025-06-01',
@@ -44,7 +44,7 @@ const education = [
 ]
 
 
-const projects = [
+export const projects = [
     {
         title: 'Watch&Rate iOS Review App',
         description: 'Engineered a native iOS application using Swift and SwiftUI, connecting to TMDb REST API for fetching and displaying comprehensive TV show data while implementing Core Data for local watchlist/review storage. Designed and built custom, reusable UI components including an interactive star rating system and intuitive user interface within a clean, tab-based navigation architecture.',
