@@ -14,7 +14,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Experience {
+model Works {
   id          String   @id @default(uuid())
   startDate   DateTime
   endDate     DateTime
@@ -26,7 +26,7 @@ model Experience {
   updatedAt   DateTime @updatedAt
 }
 
-model Project {
+model Projects {
   id          String   @id @default(uuid())
   title       String
   description String
