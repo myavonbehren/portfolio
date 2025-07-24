@@ -5,15 +5,16 @@ import styles from "./segmentedcontrol.module.css";
 
 type SegmentedControlProps = {
   items: Array<string>;
+  activeItem: number;
 };
 
-const SegmentedControl = ({ items }: SegmentedControlProps): JSX.Element => {
-  const [activeItem, setActiveitem] = useState(0);
+const SegmentedControl = ({ items, activeItem = 0 }: SegmentedControlProps): JSX.Element => {
+  const [currentActive, setCurrentActive] = useState(activeItem);
   return (
     <LayoutGroup>
       <ol className={styles.list}>
         {items.map((item, i) => {
-          const isActive = i === activeItem;
+          const isActive = i === currentActive;
           return (
             <motion.li
               className={
@@ -25,7 +26,7 @@ const SegmentedControl = ({ items }: SegmentedControlProps): JSX.Element => {
               key={item}
             >
               <button
-                onClick={() => setActiveitem(i)}
+                onClick={() => setCurrentActive(i)}
                 type="button"
                 className={styles.button}
               >
