@@ -1,14 +1,21 @@
 .list {
-    display: inline-flex;
+    display: flex;
     margin: 0;
     padding: 3px;
     list-style: none;
-    background-color: var(--boxBg);
-    border-radius: 10px;
-  }
+    width: 100%;
+    justify-content: stretch;
+
+    border-radius: 50px;
+    box-shadow: var(--large-shadow);
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(4px);
+}
   
-  .item {
-    position: relative;
+  .item, .itemNoDivider {
+    flex: 1 1 0;
+    display: flex;
+    align-items: stretch;
     margin-bottom: 0;
     line-height: 1;
   
@@ -40,14 +47,18 @@
   }
   
   .button {
+    width: 100%;
     position: relative;
     margin: 0;
-    padding: 7px 30px;
+    padding: 7px 0;
     color: var(--text);
     line-height: 1;
     background: transparent;
     border: none;
     outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   
     &:hover,
     &:focus {
@@ -68,7 +79,7 @@
     left: 0;
     z-index: 1;
     background-color: var(--inputBg);
-    border-radius: 7px;
+    border-radius: 50px;
     box-shadow: var(--shadow);
     content: "";
   }
