@@ -1,6 +1,5 @@
 const experience = [
     {
-        id: '1',
         startDate: '2025-04-01',
         endDate: '2025-07-01',
         title: 'Software Developer',
@@ -9,7 +8,6 @@ const experience = [
         icon: 'dpulogo'
     },
     {
-        id: '2',
         startDate: '2023-09-01',
         endDate: '2025-03-01',
         title: 'Computer Science Grader',
@@ -18,7 +16,6 @@ const experience = [
         icon: 'dpulogo'
     },
     {
-        id: '3',
         startDate: '2023-05-01',
         endDate: '2024-07-01',
         title: 'Creative Content Intern',
@@ -27,7 +24,6 @@ const experience = [
         icon: 'nulogo'
     },
     {
-        id: '4',
         startDate: '2022-01-01',
         endDate: '2023-11-01',
         title: 'Undergraduate Lab Researcher',
@@ -39,7 +35,6 @@ const experience = [
   
 const education = [
     {
-        id: '1',
         startDate: '2021-08-01',
         endDate: '2025-06-01',
         title: 'Bachelor of Science in Computer Science',
@@ -51,40 +46,44 @@ const education = [
 
 const projects = [
     {
-        id: '1',
         title: 'Watch&Rate iOS Review App',
         description: 'Engineered a native iOS application using Swift and SwiftUI, connecting to TMDb REST API for fetching and displaying comprehensive TV show data while implementing Core Data for local watchlist/review storage. Designed and built custom, reusable UI components including an interactive star rating system and intuitive user interface within a clean, tab-based navigation architecture.',
         skills: ['Swift', 'SwiftUI', 'TMDB API', 'URLSession', 'Core Data'],
         github: 'https://github.com/myavonbehren/iOS-Watch-Rate',
         live: 'https://watch-rate.vercel.app/',
-        image: ''
+        image: '',
+        startDate: '2024-01-01',
+        endDate: '2024-05-01'
     },
     {
-        id: '2',
         title: 'Watch&Rate',
         description: 'Created a full-stack TV review platform by developing a REST API with ASP.NET Core and React for frontend. Implemented JWT authentication with OAuth integration and Entity Framework Core for database operations. Designed responsive UI components with Bootstrap including reusable star rating and like button elements.',
         skills: ['Typescript', 'C#', 'React', 'ASP.NET Core', 'Entity Framework', 'SQLite', 'Bootstrap', 'Azure', 'Vercel'],
         github: 'https://github.com/myavonbehren/Watch-Rate',
         live: '',
-        image: ''
+        image: '',
+        startDate: '2024-01-01',
+        endDate: '2024-05-01'
     },
     {
-        id: '3',
         title: 'The GoStem Employee Website',
         description: 'Developed responsive React frontend components for a nonprofit employee management system within a 10-person agile development team using Git version control, code reviews, and sprint planning methodologies. Implemented a scheduling interface using FullCalendar with customized views and recurring event handling.',
         skills: ['JavaScript', 'CSS', 'React', 'FullCalendar'],
         github: 'https://github.com/myavonbehren/GoStem-Employee-Website',
         live: '',
-        image: ''
+        image: '',
+        startDate: '2024-01-01',
+        endDate: '2024-05-01'
     },
     {
-        id: '4',
         title: 'NAO Obstacle Detection',
         description: 'Developed autonomous navigation system for NAO humanoid robot using dual ultrasonic sensors and averaging algorithms to eliminate erratic readings and improve reliability. Built real-time obstacle detection with 1.82-foot safety threshold, 15-degree avoidance maneuvers, integrated OpenCV for colored object detection, and ALMemory service integration for sensor data processing.',
         skills: ['Python', 'OpenCV', 'NAOqi SDK'],
         github: 'https://github.com/myavonbehren/NAO-ObstacleDetection',
         live: '',
-        image: ''
+        image: '',
+        startDate: '2024-01-01',
+        endDate: '2024-05-01'
     },
 ]
 
