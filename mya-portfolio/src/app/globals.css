@@ -34,27 +34,22 @@ body {
 }
 
 .fluid-xl {
-  font-size: calc(25px + 5 * ((100vw - 320px) / 680));
-  line-height: calc(45px * ((100vw - 320px) / 680));
-}
-
-.fluid-l {
   font-size: calc(20px + 5 * ((100vw - 320px) / 680));
   line-height: calc(40px * ((100vw - 320px) / 680));
 }
 
-.fluid-m {
+.fluid-l {
   font-size: calc(18px + 2 * ((100vw - 320px) / 680));
   line-height: calc(26px * ((100vw - 320px) / 680));
 }
 
-
-.fluid-s {
+.fluid-m {
   font-size: calc(16px + 2 * ((100vw - 320px) / 680));
   line-height: calc(20px * ((100vw - 320px) / 680));
 }
 
-.fluid-xs {
+
+.fluid-s {
   font-size: calc(12px * ((100vw - 320px) / 680));
   line-height: calc(15px * ((100vw - 320px) / 680));
 }
@@ -69,6 +64,13 @@ body {
 
 .btn-base {
   border-radius: 50px;
+  box-shadow: var(--large-shadow);
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(4px);
+}
+
+.container-base {
+  border-radius: 30px;
   box-shadow: var(--large-shadow);
   background: rgba(255,255,255,0.10);
   backdrop-filter: blur(4px);
