@@ -8,6 +8,7 @@
   --activeBg: #292929;
   --text: #000;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --small-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   --large-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
 }
 
@@ -65,6 +66,13 @@ body {
 .btn-base {
   border-radius: 50px;
   box-shadow: var(--large-shadow);
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(4px);
+}
+
+.btn-base-small {
+  border-radius: 50px;
+  box-shadow: var(--small-shadow);
   background: rgba(255,255,255,0.10);
   backdrop-filter: blur(4px);
 }
