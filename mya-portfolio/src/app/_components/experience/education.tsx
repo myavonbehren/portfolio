@@ -3,7 +3,7 @@ import TextContainer from "./text-container";
 const Education = async () => {
     return (
         <div>
-            <TextContainer string="education" />
+            <h1>Education</h1>
         </div>
     )
 }

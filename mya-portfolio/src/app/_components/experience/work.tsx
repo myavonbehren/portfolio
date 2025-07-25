@@ -1,10 +1,10 @@
 import TextContainer from "./text-container";
 
-const Work = async () => {
+const Work = () => {
     return (
         <>
             <div className="container-base">
-                <TextContainer string="work" />
+                <TextContainer/>
             </div>
         </>
     )
