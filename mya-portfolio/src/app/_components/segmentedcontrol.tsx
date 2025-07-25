@@ -1,20 +1,19 @@
-"use client";
-import { JSX, useState } from "react";
+import { JSX,useState } from "react";
 import { motion, LayoutGroup } from "framer-motion";
 import styles from "./segmentedcontrol.module.css";
 
 type SegmentedControlProps = {
   items: Array<string>;
   activeItem: number;
+  onChange: (index: number) => void;
 };
 
-const SegmentedControl = ({ items, activeItem = 0 }: SegmentedControlProps): JSX.Element => {
-  const [currentActive, setCurrentActive] = useState(activeItem);
+const SegmentedControl = ({ items, activeItem, onChange }: SegmentedControlProps): JSX.Element => {
   return (
     <LayoutGroup>
       <ol className={styles.list}>
         {items.map((item, i) => {
-          const isActive = i === currentActive;
+          const isActive = i === activeItem;
           return (
             <motion.li
               className={
@@ -26,7 +25,7 @@ const SegmentedControl = ({ items, activeItem = 0 }: SegmentedControlProps): JSX
               key={item}
             >
               <button
-                onClick={() => setCurrentActive(i)}
+                onClick={() => onChange(i)}
                 type="button"
                 className={styles.button}
               >

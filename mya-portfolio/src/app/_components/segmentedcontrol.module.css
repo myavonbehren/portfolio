@@ -1,85 +1,85 @@
 .list {
-    display: flex;
-    margin: 0;
-    padding: 3px;
-    list-style: none;
-    width: 100%;
-    justify-content: stretch;
+  display: flex;
+  margin: 0;
+  padding: 3px;
+  list-style: none;
+  width: 100%;
+  justify-content: stretch;
 
-    border-radius: 50px;
-    box-shadow: var(--large-shadow);
-    background: rgba(255,255,255,0.10);
-    backdrop-filter: blur(4px);
+  border-radius: 50px;
+  box-shadow: var(--large-shadow);
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(4px);
 }
-  
-  .item, .itemNoDivider {
-    flex: 1 1 0;
-    display: flex;
-    align-items: stretch;
-    margin-bottom: 0;
-    line-height: 1;
-  
-    &:after {
-      position: absolute;
-      top: 15%;
-      right: -0.5px;
-      display: block;
-      width: 1px;
-      height: 70%;
-      background-color: var(--border);
-      transition: opacity 200ms ease-out;
-      content: "";
-    }
-  
-    &:last-of-type {
-      &:after {
-        display: none;
-      }
-    }
-  }
-  
-  .itemNoDivider {
-    composes: item;
-  
-    &:after {
-      opacity: 0;
-    }
-  }
-  
-  .button {
-    width: 100%;
-    position: relative;
-    margin: 0;
-    padding: 7px 0;
-    color: var(--text);
-    line-height: 1;
-    background: transparent;
-    border: none;
-    outline: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    &:hover,
-    &:focus {
-      cursor: pointer;
-    }
-  }
-  
-  .label {
-    position: relative;
-    z-index: 2;
-  }
-  
-  .active {
+
+.item, .itemNoDivider {
+  flex: 1 1 0;
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 0;
+  line-height: 1;
+
+  &:after {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    background-color: var(--inputBg);
-    border-radius: 50px;
-    box-shadow: var(--shadow);
+    top: 15%;
+    right: -0.5px;
+    display: block;
+    width: 1px;
+    height: 70%;
+    background-color: var(--border);
+    transition: opacity 200ms ease-out;
     content: "";
   }
+
+  &:last-of-type {
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.itemNoDivider {
+  composes: item;
+
+  &:after {
+    opacity: 0;
+  }
+}
+
+.button {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 7px 0;
+  color: var(--text);
+  line-height: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}
+
+.label {
+  position: relative;
+  z-index: 2;
+}
+
+.active {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: var(--inputBg);
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  content: "";
+}
