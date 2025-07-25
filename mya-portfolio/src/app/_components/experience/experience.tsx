@@ -1,6 +1,7 @@
 import Work from "./work";
 import Education from "./education";
 import ExperienceTabs from "./experience-tabs";
+import Skills from "./skills";
 
 const Experience = () => {
   return (
@@ -11,6 +12,7 @@ const Experience = () => {
                 <Work />
                 <Education />
             </ExperienceTabs>
+            <Skills />
         </div>
     </div>
   );
