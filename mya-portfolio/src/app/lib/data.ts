@@ -28,7 +28,13 @@ export async function fetchEducation() {
 
 export async function fetchProjects() {
     try {
-        const projects = await prisma.projects.findMany();
+        const projects = await prisma.projects.findMany(
+            {
+                orderBy: {
+                    startDate: 'desc'
+                }
+            }
+        );
         return projects;
     } catch (error) {
         console.error('Database Error:', error);
