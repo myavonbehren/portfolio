@@ -4,13 +4,14 @@ import { FiGithub } from "react-icons/fi";
 import { TbWorldWww } from "react-icons/tb";
 import Image from "next/image";
 
+
 const formatDate = (date: Date) => {
     return new Date(date).toLocaleDateString('en-US', { year: 'numeric' });
   };
 
 const skills = (skills: any) => {
     return skills.map((skill: any, index: number) => (
-        <button className="fluid-s btn-base-small px-3 py-2" key={index}>{skill}</button>
+        <button className="fluid-m btn-base-small px-3 py-2" key={index}>{skill}</button>
     ))
 }
 
@@ -33,15 +34,16 @@ const ProjectItems = async () => {
     const projects = await fetchProjects();
 
     return (
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 mt-5">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4 mt-5">
         {projects.map((project: any) => (
-          <div className="container-base overflow-hidden" key={project.id}>
+          <div className="container-base overflow-hidden hover:scale-102 transition-all duration-300 ease-in-out" key={project.id}>
             <LogoDisplay icon={project.icon} />
             <Image
                 src={project.image}
                 alt={project.title}
                 width={1920}
-                height={1080}/>
+                height={1080}
+                priority={true}/>
             
             <div className="p-5">
                 <div className="flex flex-row justify-between items-center w-full mb-5">
@@ -60,7 +62,7 @@ const ProjectItems = async () => {
 
                 </div>
 
-                <div className="fluid-s ml-1 mb-5">
+                <div className="fluid-m ml-1 mb-5">
                     {project.description}
                 </div>
 
