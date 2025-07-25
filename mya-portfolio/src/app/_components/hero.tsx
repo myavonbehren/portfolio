@@ -5,7 +5,7 @@ import { FiMail } from "react-icons/fi";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col items-center justify-center gap-2 bg-gradient-hero h-screen">
+    <section className="flex flex-col items-center justify-center gap-2 bg-gradient-hero h-screen" id="home">
         <h2 className="font-bold fluid-xl text-center">Hello, I'm Mya 👋🏽</h2>
         <h1 className="font-bold uppercase fluid-xxxl text-center">Full Stack <br /> Developer</h1>
         <h3 className="font-bold fluid-l text-center">Based near Asheville, NC</h3>
