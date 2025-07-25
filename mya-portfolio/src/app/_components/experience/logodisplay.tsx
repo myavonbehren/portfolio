@@ -25,12 +25,12 @@ export default function LogoDisplay({ icon }: { icon: string }) {
   if (icon === "dpulogo") 
     return (
   <div className="inline-flex flex-row items-center justify-center p-5 btn-base">
-    <Dpulogo className="w-6 h-6" />;
+    <Dpulogo className="w-6 h-6" />
     </div>
     )
   if (icon === "nulogo") return (
     <div className="inline-flex flex-row items-center justify-center p-5 btn-base">
-    <Nulogo className="w-6 h-6" />;
+    <Nulogo className="w-6 h-6" />
     </div>
     )
   return null;
