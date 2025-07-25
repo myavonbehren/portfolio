@@ -1,24 +1,22 @@
-import SegmentedControl from "../segmentedcontrol";
+"use client";
 import Work from "./work";
 import Education from "./education";
+import SegmentedControl from "../segmentedcontrol";
+import { useState } from "react";
 
-const items = ["Work", "Education"];
-
-const showItem = (item: string) => {
-    if (item == "Work") {
-        return <Work />
-    } else if (item == "Education") {
-        return <Education />
-    }
-}
 
 const Experience = () => {
-    return (
-        <div className="flex flex-col items-center justify-center gap-2" id="experience">
-            <h2 className="fluid-xl font-bold">Experience</h2>
-            <SegmentedControl items={items} activeItem={0} />
-            
-        </div>
-    )
-}
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  return (
+    <div className="flex flex-col items-center justify-center gap-2" id="experience">
+      <SegmentedControl
+        items={["Work", "Education"]}
+        activeItem={activeIndex}
+        onChange={setActiveIndex}
+      />
+      <Work />
+    </div>
+  );
+};
 export default Experience;
