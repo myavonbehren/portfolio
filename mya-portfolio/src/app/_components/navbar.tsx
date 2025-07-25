@@ -6,10 +6,12 @@ import { CgMenuRightAlt } from "react-icons/cg";
 import { IoInvertMode } from "react-icons/io5";
 import { IoInvertModeOutline } from "react-icons/io5";
 import { CgClose } from "react-icons/cg";
+import { useTheme } from '@/providers/ThemeProviders';
 
 const Navbar = () => {
     const sideMenuRef = useRef<HTMLDivElement>(null)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const { theme, setTheme, isDark } = useTheme();
 
     const openSideMenu = () => {
         console.log('Opening menu')
@@ -27,6 +29,23 @@ const Navbar = () => {
         }
     }
 
+    const toggleTheme = () => {
+        if (theme === 'light') {
+            setTheme('dark');
+        } else if (theme === 'dark') {
+            setTheme('light');
+        } else {
+            setTheme(isDark ? 'light' : 'dark');
+        }
+    };
+
+    const getThemeIcon = () => {
+        if (theme === 'system') {
+            return isDark ? <IoInvertMode className="w-6 h-6" /> : <IoInvertModeOutline className="w-6 h-6" />;
+        }
+        return isDark ? <IoInvertMode className="w-6 h-6" /> : <IoInvertModeOutline className="w-6 h-6" />;
+    };
+
   return (
     <>
     <nav className='
@@ -43,8 +62,12 @@ const Navbar = () => {
 
         {/* Right side buttons */}
         <div className='absolute right-5 lg:right-8 xl:right-[8%] flex items-center gap-3'>
-            <button className='rounded-full p-3 shadow-lg bg-white/10 backdrop-blur-sm'>
-                <IoInvertModeOutline className="w-6 h-6"/>
+            <button 
+                className='rounded-full p-3 shadow-lg bg-white/10 backdrop-blur-sm transition-all duration-200 hover:scale-110 cursor-pointer'
+                onClick={toggleTheme}
+                title={`Current theme: ${theme}${theme === 'system' ? ` (${isDark ? 'dark' : 'light'})` : ''}`}
+            >
+                {getThemeIcon()}
             </button>
             
             <button className='block md:hidden rounded-full p-3 shadow-lg bg-white/10 backdrop-blur-sm cursor-pointer' onClick={openSideMenu}>
