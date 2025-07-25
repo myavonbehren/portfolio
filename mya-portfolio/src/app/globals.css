@@ -29,7 +29,7 @@ body {
 }
 
 .fluid-xxl {
-  font-size: calc(18px + 7 * ((100vw - 320px) / 680)); /* 25px max */
+  font-size: calc(20px + 5 * ((100vw - 320px) / 680)); /* 25px max */
   line-height: calc(28px + 7 * ((100vw - 320px) / 680));
 }
 
