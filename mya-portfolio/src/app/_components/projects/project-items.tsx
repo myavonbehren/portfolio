@@ -2,6 +2,7 @@ import { fetchProjects  } from "@/app/lib/data";
 import LogoDisplay from "../experience/logodisplay";
 import { FiGithub } from "react-icons/fi";
 import { TbWorldWww } from "react-icons/tb";
+import Image from "next/image";
 
 const formatDate = (date: Date) => {
     return new Date(date).toLocaleDateString('en-US', { year: 'numeric' });
@@ -34,8 +35,15 @@ const ProjectItems = async () => {
     return (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 mt-5">
         {projects.map((project: any) => (
-          <div className="container-base p-7" key={project.id}>
+          <div className="container-base overflow-hidden" key={project.id}>
             <LogoDisplay icon={project.icon} />
+            <Image
+                src={project.image}
+                alt={project.title}
+                width={1920}
+                height={1080}/>
+            
+            <div className="p-5">
                 <div className="flex flex-row justify-between items-center w-full mb-5">
                     <p className="fluid-m font-bold">{project.title}</p>
                     
@@ -59,9 +67,8 @@ const ProjectItems = async () => {
                 <div className="flex flex-wrap gap-1 w-full md:flex-wrap">
                     {skills(project.skills)}
                 </div>
-
-
-          </div>
+            </div>
+        </div>
         ))}
         </div>
     )
