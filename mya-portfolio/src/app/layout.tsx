@@ -7,6 +7,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "mya von behren",
   description: "mya von behren's portfolio",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
