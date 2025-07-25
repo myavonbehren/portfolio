@@ -11,7 +11,7 @@ type SegmentedControlProps = {
 const SegmentedControl = ({ items, activeItem, onChange }: SegmentedControlProps): JSX.Element => {
   return (
     <LayoutGroup>
-      <ol className={styles.list}>
+      <ol className={styles.list} >
         {items.map((item, i) => {
           const isActive = i === activeItem;
           return (
