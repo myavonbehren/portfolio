@@ -35,7 +35,7 @@ const Navbar = () => {
     '>
         {/* Desktop Navigation - Centered */}
         <div className='hidden md:flex items-center gap-7 lg:gap-11 rounded-full px-15 py-4 shadow-lg bg-white/10 backdrop-blur-sm'>
-            <Link href="/" className='transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>Home</Link>
+            <Link href="#home" className='transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>Home</Link>
             <Link href="#experience" className='transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>Experience</Link>
             <Link href="#projects" className='transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>Projects</Link>
             <Link href="#about" className='transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>About</Link>
@@ -59,7 +59,7 @@ const Navbar = () => {
                 <CgClose className="w-6 h-6 cursor-pointer"/>
             </div>
 
-            <Link href="/" onClick={closeSideMenu}>Home</Link>
+            <Link href="#home" onClick={closeSideMenu}>Home</Link>
             <Link href="#experience" onClick={closeSideMenu}>Experience</Link>
             <Link href="#projects" onClick={closeSideMenu}>Projects</Link>
             <Link href="#about" onClick={closeSideMenu}>About</Link>
