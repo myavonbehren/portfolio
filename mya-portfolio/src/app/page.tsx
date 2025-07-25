@@ -1,6 +1,6 @@
 import Hero from "./_components/hero";
 import Experience from "./_components/experience/experience";
-import Projects from "./_components/projects";
+import Projects from "./_components/projects/projects";
 import Container from "./_components/container";
 
 export default function Home() {
