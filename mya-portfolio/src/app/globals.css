@@ -12,7 +12,6 @@
   --large-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
 }
 
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -23,6 +22,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/* System preference (fallback) */
 @media (prefers-color-scheme: dark) { 
   :root {
     --background: #0B1215FF ;
@@ -31,13 +31,30 @@ html {
     --boxBg: #1f1e1d;
     --activeBg: #292929;
     --text: #fff;
-
-    .bg-gradient-hero {
-      background: radial-gradient(70.75% 67.36% at 50% 50%, rgba(98, 60, 234, 0.80) 0%, rgba(0, 0, 0, 0.55) 88.94%), #0B1215;
-    }
   }
 }
 
+/* Class-based dark mode */
+html.dark {
+  --background: #0B1215FF ;
+  --foreground: #FAF9F6FF;
+  
+  --boxBg: #1f1e1d;
+  --activeBg: #292929;
+  --text: #fff;
+}
+
+/* Class-based light mode */
+html.light {
+  --background: #FAF9F6FF;
+  --foreground: #0B1215FF;
+  
+  --boxBg: #f3f3f3;
+  --activeBg: #292929;
+  --text: #000;
+}
+
+/* Light mode gradients (default) */
 .bg-gradient-hero {
   background: 
   radial-gradient(70.75% 67.36% at 50% 50%, rgba(250, 249, 246, 0.40) 0%, rgba(231, 223, 198, 0.40) 27%, rgba(208, 197, 243, 0.40) 60%, rgba(157, 134, 239, 0.40) 87%, rgba(98, 60, 234, 0.40) 100%), 
@@ -49,6 +66,26 @@ html {
   background: 
     radial-gradient(94% 84% at 47% 50%, rgba(250, 249, 246, 0.60) 20%, rgba(231, 223, 198, 0.60) 37%, rgba(170, 148, 215, 0.60) 71%, rgba(141, 113, 222, 0.60) 100%), 
     radial-gradient(110% 57% at 50% 50%, #FAF9F6 0%, #E9F1F7 75%);
+}
+
+/* Dark mode gradients */
+html.dark .bg-gradient-hero {
+  background: radial-gradient(70.75% 67.36% at 50% 50%, rgba(98, 60, 234, 0.80) 0%, rgba(0, 0, 0, 0.55) 88.94%), #0B1215;
+}
+
+html.dark .bg-gradient {
+  background: radial-gradient(86.78% 44.55% at 47.99% 50%, rgba(98, 60, 234, 0.77) 35%, rgba(0, 0, 0, 0.35) 100%), #0B1215;
+}
+
+/* System preference dark mode gradients (fallback) */
+@media (prefers-color-scheme: dark) {
+  html:not(.light) .bg-gradient-hero {
+    background: radial-gradient(70.75% 67.36% at 50% 50%, rgba(98, 60, 234, 0.80) 0%, rgba(0, 0, 0, 0.55) 88.94%), #0B1215;
+  }
+
+  html:not(.light) .bg-gradient {
+    background: radial-gradient(86.78% 44.55% at 47.99% 50%, rgba(98, 60, 234, 0.77) 35%, rgba(0, 0, 0, 0.35) 100%), #0B1215;
+  }
 }
 
 .fluid-xxxl {
@@ -105,3 +142,31 @@ html {
 
 /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
 */
+
+/* Theme-aware image display */
+.portrait-image-light {
+  display: block;
+}
+
+.portrait-image-dark {
+  display: none;
+}
+
+html.dark .portrait-image-light {
+  display: none;
+}
+
+html.dark .portrait-image-dark {
+  display: block;
+}
+
+/* System preference fallback */
+@media (prefers-color-scheme: dark) {
+  html:not(.light) .portrait-image-light {
+    display: none;
+  }
+  
+  html:not(.light) .portrait-image-dark {
+    display: block;
+  }
+}
