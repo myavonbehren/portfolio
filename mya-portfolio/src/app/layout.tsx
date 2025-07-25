@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { hanken_grotesk } from '@/app/_components/font';
 import Navbar from '@/app/_components/navbar';
+import { ThemeProvider } from '@/providers/ThemeProviders';
 import "./globals.css";
 
 
@@ -20,8 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${hanken_grotesk.className} ${hanken_grotesk.className} antialiased`}>
-        <Navbar />
+        <ThemeProvider>
+          <Navbar />
             {children}
+        </ThemeProvider>
       </body>
     </html>
   );
