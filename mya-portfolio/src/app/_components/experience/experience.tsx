@@ -1,21 +1,17 @@
-"use client";
 import Work from "./work";
 import Education from "./education";
-import SegmentedControl from "../segmentedcontrol";
-import { useState } from "react";
-
+import ExperienceTabs from "./experience-tabs";
 
 const Experience = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   return (
-    <div className="flex flex-col items-center justify-center gap-2" id="experience">
-      <SegmentedControl
-        items={["Work", "Education"]}
-        activeItem={activeIndex}
-        onChange={setActiveIndex}
-      />
-      <Work />
+    <div className="flex flex-col justify-start pt-10" id="experience">
+        <h1 className="fluid-xxl font-bold">Experience</h1>
+        <div className="w-full justify-center items-center">
+            <ExperienceTabs>
+                <Work />
+                <Education />
+            </ExperienceTabs>
+        </div>
     </div>
   );
 };
