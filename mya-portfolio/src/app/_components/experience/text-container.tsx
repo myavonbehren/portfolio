@@ -1,6 +1,7 @@
 import prisma from "@/app/lib/db"
 import Dpulogo from "../svg/dpulogo"
 import Nulogo from "../svg/nulogo"
+import { useState, useEffect } from "react"
 
 const formatDate = (date?: Date | null) => {
     if (!date) {
@@ -20,29 +21,34 @@ interface Type {
     string: string;
 }
 
-const TextContainer = async (type: Type) => {
-    const works = await prisma.works.findMany({
-        orderBy: {
-            endDate: 'desc'
-        }
-    })
+const TextContainer = () => {
+    const [work, setWork] = useState([])
+
+    useEffect(() => {
+        fetch("/api/info")
+        .then((res) => res.json())
+        .then((data) => setWork(data))
+        .catch((err) => console.error(err))
+    }, [])
 
     return (
         <>
+        {console.log(work)}
+        {/*}
         {type.string == "work" ? (
         <div className="px-11 py-12">
-            {works.map((work) => (
-                <div className="inline-flex flex-row items-center justify-center gap-4 pb-5" key={work.id}>
+            {work.map((job: any) => (
+                <div className="inline-flex flex-row items-center justify-center gap-4 pb-5" key={job.id}>
                     <div className="inline-flex flex-row items-center justify-center btn-base p-5">
-                        {work.icon == "dpulogo" ? <Dpulogo className="w-6 h-6"></Dpulogo> : <Nulogo className="w-6 h-6"></Nulogo>}
+                        {job.icon == "dpulogo" ? <Dpulogo className="w-6 h-6"></Dpulogo> : <Nulogo className="w-6 h-6"></Nulogo>}
                     </div>
                     <div className="inline-flex flex-col pb-1">
                         <div className="font-semibold">
-                        {formatDate(work.startDate)} - {formatDate(work.endDate)}
-                        <p className="fluid-m">{work.title}</p>
-                        <p className="fluid-s">{work.company}</p>
+                        {formatDate(job.startDate)} - {formatDate(job.endDate)}
+                        <p className="fluid-m">{job.title}</p>
+                        <p className="fluid-s">{job.company}</p>
                         </div>
-                        {description(work.description)}
+                        {description(job.description)}
                     </div>
                 </div>
             ))}
@@ -52,6 +58,7 @@ const TextContainer = async (type: Type) => {
                 <h1>Education</h1>
             </div>
         )}
+        */}
         </>
     )
 }
