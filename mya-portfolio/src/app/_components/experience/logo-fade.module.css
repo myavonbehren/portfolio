@@ -1,0 +1,20 @@
+ .logoContainer {
+  transition: opacity 0.3s, transform 0.3s;
+  /* Fluid scaling: gets smaller as viewport shrinks */
+  transform: scale(clamp(0.5, 1vw - 0.5, 1));
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .logoContainer {
+    opacity: 0.2;
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 400px) {
+  .logoContainer {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
