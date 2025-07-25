@@ -1,10 +1,10 @@
-import TextContainer from "./text-container";
+import WorkText from "./work-text";
 
 const Work = () => {
     return (
         <>
             <div className="container-base">
-                <TextContainer/>
+                <WorkText/>
             </div>
         </>
     )
