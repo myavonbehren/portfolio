@@ -1,9 +1,9 @@
-import TextContainer from "./text-container";
+import EducationText from "./education-text";
 
-const Education = async () => {
+const Education = () => {
     return (
-        <div>
-            <h1>Education</h1>
+        <div className="container-base">
+            <EducationText/>
         </div>
     )
 }
