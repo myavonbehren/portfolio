@@ -24,10 +24,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.bg-gradient {
+  background: 
+    radial-gradient(94% 84% at 47% 50%, rgba(250, 249, 246, 0.60) 20%, rgba(231, 223, 198, 0.60) 37%, rgba(170, 148, 215, 0.60) 71%, rgba(141, 113, 222, 0.60) 100%), 
+    radial-gradient(110% 57% at 50% 50%, #FAF9F6 0%, #E9F1F7 75%);
+}
+
 html {
   scroll-behavior: smooth;
 }
-
 
 .fluid-xxxl {
   font-size: calc(50px + 23 * ((100vw - 320px) / 680));
@@ -61,11 +66,10 @@ html {
 }
 
 .bg-gradient-hero {
-  background: radial-gradient(85.01% 80.94% at 50% 50%, var(--Color-Palette-Light-White, rgba(250, 249, 246, 0.40)) 0%, var(--Color-Palette-Light-Pearl, rgba(231, 223, 198, 0.40)) 27.03%, rgba(208, 197, 243, 0.40) 59.87%, rgba(157, 134, 239, 0.40) 87.22%, var(--Color-Palette-Light-Majorelle-Blue, rgba(98, 60, 234, 0.40)) 100%), linear-gradient(0deg, var(--Color-Palette-Light-White, #FAF9F6) 0%, #E9F1F7 19.23%, #E7DFC6 44.71%, #E7DFC6 55.29%, #E9F1F7 76.44%, var(--Color-Palette-Light-White, #FAF9F6) 100%), var(--Color-Palette-Light-White, #FAF9F6);
-}
-
-.bg-gradient {
-  background: var(--Radial-Background, radial-gradient(107.73% 81.57% at 50% 47.31%, var(--Color-Palette-Light-White, rgba(250, 249, 246, 0.40)) 29.81%, var(--Color-Palette-Light-Pearl, rgba(231, 223, 198, 0.40)) 56.25%, rgba(170, 148, 215, 0.40) 80.77%, rgba(141, 113, 222, 0.40) 100%), radial-gradient(156.39% 81.46% at 50% 50%, var(--Color-Palette-Light-White, #FAF9F6) 0%, var(--Color-Palette-Light-Alice-Blue, #E9F1F7) 75%));
+  background: 
+  radial-gradient(70.75% 67.36% at 50% 50%, rgba(250, 249, 246, 0.40) 0%, rgba(231, 223, 198, 0.40) 27%, rgba(208, 197, 243, 0.40) 60%, rgba(157, 134, 239, 0.40) 87%, rgba(98, 60, 234, 0.40) 100%), 
+  linear-gradient(0deg, #FAF9F6 0%, #E9F1F7 20%, #E7DFC6 45%, #E7DFC6 55%, #E9F1F7 76%, #FAF9F6 100%), 
+  #FAF9F6;
 }
 
 .btn-base {
@@ -88,6 +92,7 @@ html {
   background: rgba(255,255,255,0.10);
   backdrop-filter: blur(4px);
 }
+
 
 /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
 */
