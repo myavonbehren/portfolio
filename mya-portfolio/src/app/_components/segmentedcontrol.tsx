@@ -1,4 +1,4 @@
-import { JSX,useState } from "react";
+import { JSX } from "react";
 import { motion, LayoutGroup } from "framer-motion";
 import styles from "./segmentedcontrol.module.css";
 

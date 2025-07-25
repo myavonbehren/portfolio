@@ -1,6 +1,4 @@
 import { fetchWork } from "@/app/lib/data";
-import Dpulogo from "../svg/dpulogo";
-import Nulogo from "../svg/nulogo";
 import LogoDisplay from "./logodisplay";
 
 const formatDate = (date?: Date | null) => {

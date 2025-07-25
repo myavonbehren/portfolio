@@ -4,11 +4,6 @@ import { FiGithub } from "react-icons/fi";
 import { TbWorldWww } from "react-icons/tb";
 import Image from "next/image";
 
-
-const formatDate = (date: Date) => {
-    return new Date(date).toLocaleDateString('en-US', { year: 'numeric' });
-  };
-
 const skills = (skills: any) => {
     return skills.map((skill: any, index: number) => (
         <button className="fluid-m btn-base-small px-3 py-2" key={index}>{skill}</button>
