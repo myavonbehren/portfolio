@@ -22,8 +22,8 @@ const live = (live: string) => {
         href={live}
         target="_blank"
         rel="noopener noreferrer"
-        className="btn-base p-1.5 inline-flex items-center transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">                
-            <TbWorldWww className="w-3.5 h-3.5"/>
+        className="btn-base p-2 inline-flex items-center transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">                
+            <TbWorldWww className="w-4 h-4"/>
         </a>
     )
 }
@@ -32,12 +32,12 @@ const ProjectItems = async () => {
     const projects = await fetchProjects();
 
     return (
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 mt-5">
         {projects.map((project: any) => (
-          <div className="container-base p-5" key={project.id}>
+          <div className="container-base p-7" key={project.id}>
             <LogoDisplay icon={project.icon} />
                 <div className="flex flex-row justify-between items-center w-full mb-5">
-                    <p className="fluid-m">{project.title}</p>
+                    <p className="fluid-m font-bold">{project.title}</p>
                     
                     <div className="flex flex-row gap-2">
                         {live(project.live)}
@@ -45,8 +45,8 @@ const ProjectItems = async () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-base p-1.5 inline-flex items-center transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">                
-                            <FiGithub className="w-3.5 h-3.5"/>
+                        className="btn-base p-2 inline-flex items-center transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">                
+                            <FiGithub className="w-4 h-4"/>
                         </a>
                     </div>
 
