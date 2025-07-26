@@ -1,4 +1,5 @@
 import { fetchAbout } from "@/app/lib/data";
+import { About } from "@/app/lib/types";
 import Image from "next/image";
 
 const AboutItem = async () => {
@@ -7,7 +8,7 @@ const AboutItem = async () => {
     return (
         <div className="flex flex-col mt-5">
             <h1 className="fluid-l font-bold">Hello, I&apos;m Mya 👋🏽</h1>
-            {about.map((details: any) => (
+            {about.map((details: About) => (
                 <div key={details.id} className="flex flex-row gap-2 mt-2">
                     {/* Portrait image container */}
                     <div className="hidden md:block transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">

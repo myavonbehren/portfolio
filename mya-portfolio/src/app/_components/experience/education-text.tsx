@@ -1,4 +1,5 @@
 import { fetchEducation } from "@/app/lib/data";
+import { Education } from "@/app/lib/types";
 import LogoDisplay from "./logodisplay";
 
 const formatDate = (date?: Date | null) => {
@@ -11,9 +12,9 @@ const EducationText = async () => {
     const education = await fetchEducation();
     return (
     <div className="px-11 py-8">
-      {education.map((bs: any) => (
+      {education.map((bs: Education) => (
         <div className="inline-flex flex-row items-center justify-center gap-4" key={bs.id}>
-          <LogoDisplay icon={bs.icon} />
+          {bs.icon && <LogoDisplay icon={bs.icon} />}
           <div className="inline-flex flex-col pb-1">
             <div className="font-semibold">
               {formatDate(bs.startDate)} - {formatDate(bs.endDate)}

@@ -1,4 +1,5 @@
 import { fetchWork } from "@/app/lib/data";
+import { Work } from "@/app/lib/types";
 import LogoDisplay from "./logodisplay";
 
 const formatDate = (date?: Date | null) => {
@@ -16,9 +17,9 @@ const WorkText = async () => {
   const work = await fetchWork();
   return (
     <div className="px-11 pt-11 pb-6">
-      {work.map((job: any) => (
+      {work.map((job: Work) => (
         <div className="inline-flex flex-row items-center justify-center gap-4 pb-5 " key={job.id}>
-            <LogoDisplay icon={job.icon} />
+            {job.icon && <LogoDisplay icon={job.icon} />}
           <div className="inline-flex flex-col pb-1">
             <div className="font-semibold">
               {formatDate(job.startDate)} - {formatDate(job.endDate)}
