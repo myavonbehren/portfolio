@@ -1,6 +1,5 @@
 import { fetchProjects  } from "@/app/lib/data";
-import { Project } from "@/app/lib/types";
-import LogoDisplay from "../experience/logodisplay";
+import { Project } from "@/app/lib/types"; 
 import { FiGithub } from "react-icons/fi";
 import { TbWorldWww } from "react-icons/tb";
 import Image from "next/image";
