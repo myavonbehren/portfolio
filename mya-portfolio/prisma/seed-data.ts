@@ -51,7 +51,7 @@ export const projects = [
         skills: ['Swift', 'SwiftUI', 'TMDB API', 'URLSession', 'Core Data'],
         github: 'https://github.com/myavonbehren/iOS-Watch-Rate',
         live: 'https://watch-rate.vercel.app/',
-        image: '',
+        image: '/watch-rate-ios.png',
         startDate: '2025-03-01',
         endDate: '2025-06-01'
     },
@@ -61,7 +61,7 @@ export const projects = [
         skills: ['Typescript', 'C#', 'React', 'ASP.NET Core', 'Entity Framework', 'SQLite', 'Bootstrap', 'Azure', 'Vercel'],
         github: 'https://github.com/myavonbehren/Watch-Rate',
         live: '',
-        image: '',
+        image: '/watch-rate.png',
         startDate: '2025-03-01',
         endDate: '2025-06-01'
     },
@@ -71,7 +71,7 @@ export const projects = [
         skills: ['JavaScript', 'CSS', 'React', 'FullCalendar'],
         github: 'https://github.com/myavonbehren/GoStem-Employee-Website',
         live: '',
-        image: '',
+        image: '/go-stem.png',
         startDate: '2025-01-01',
         endDate: '2025-03-01'
     },
@@ -81,7 +81,7 @@ export const projects = [
         skills: ['Python', 'OpenCV', 'NAOqi SDK'],
         github: 'https://github.com/myavonbehren/NAO-ObstacleDetection',
         live: '',
-        image: '',
+        image: '/nao.png',
         startDate: '2023-09-01',
         endDate: '2023-11-01'
     },

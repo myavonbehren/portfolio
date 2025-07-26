@@ -1,5 +1,5 @@
 import { works, education, projects, skills, about } from './seed-data'
-import { PrismaClient } from "../generated/prisma"
+import { PrismaClient } from "../generated/prisma/index.js"
 
 const prisma = new PrismaClient()
 async function main() {
@@ -9,7 +9,7 @@ async function main() {
       data: {
         ...work,
         startDate: new Date(work.startDate),
-        endDate: new Date(work.endDate),
+        endDate: work.endDate ? new Date(work.endDate) : null,
       },
     })
   }
