@@ -6,7 +6,7 @@ const AboutItem = async () => {
     
     return (
         <div className="flex flex-col mt-5">
-            <h1 className="fluid-l font-bold">Hello, I&apos;m Mya 👋🏽</h1>
+            <h1 className="fluid-l font-bold">Hello, I'm Mya 👋🏽</h1>
             {about.map((details: any) => (
                 <div key={details.id} className="flex flex-row gap-2 mt-2">
                     {/* Portrait image container */}
