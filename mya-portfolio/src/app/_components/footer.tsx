@@ -29,6 +29,9 @@ const Footer = () => {
                             GitHub
                         </a>
                         <a href="mailto:myakvb@gmail.com" target="_blank">Email</a>
+                        <a href="https://www.youtube.com/@myavonbehren" target="_blank">
+                            YouTube
+                        </a>
                     </ul>
                 </div>
                 </div>
