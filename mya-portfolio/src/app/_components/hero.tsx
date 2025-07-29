@@ -2,7 +2,8 @@ import { FiLinkedin } from "react-icons/fi";
 import { FiGithub } from "react-icons/fi";
 import { FiMail } from "react-icons/fi";
 import { FiArrowRight } from "react-icons/fi";
-import { FiYoutube } from "react-icons/fi";
+import { TbMovie } from "react-icons/tb";
+import Link from "next/link";
 
 
 const Hero = () => {
@@ -36,18 +37,15 @@ const Hero = () => {
             className="btn-base p-2.5 inline-flex items-center transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">                
                 <FiGithub className="w-6 h-6"/>
             </a>
-            <a
-            href="https://www.youtube.com/@myavonbehren"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-base p-2.5 inline-flex items-center transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-                <FiYoutube className="w-6 h-6"/>
-            </a>
+            <Link href="/creative" className="btn-base p-2.5 inline-flex items-center transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                <TbMovie className="w-6 h-6"/>
+            </Link>
             <a href="mailto:myakvb@gmail.com"
             rel="noopener noreferrer"
             className="btn-base p-2.5 inline-flex items-center transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
                 <FiMail className="w-6 h-6"/>
-            </a>                
+            </a>
+
         </div>
     </section>
   )
