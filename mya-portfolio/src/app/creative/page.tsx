@@ -1,7 +1,12 @@
+import Gallery from "./gallery";
+import Container from "@/app/_components/container";
+
 const page = () => {
     return (
         <div>
-            <h1>Creative</h1>
+            <Container>
+                <Gallery />
+            </Container>
         </div>
     )
 }
