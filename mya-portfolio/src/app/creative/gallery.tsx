@@ -9,8 +9,8 @@ const Gallery = () => {
                     <Image 
                         src="/LOCK-IT-DOWN-LACROSSE.gif" 
                         alt="LOCK IT DOWN GIF" 
-                        width={700} 
-                        height={394} 
+                        width={200} 
+                        height={113} 
                         className="w-full h-full object-cover"
                         priority
                         />
@@ -28,8 +28,8 @@ const Gallery = () => {
                     <Image 
                     src="/GET-LOUD.gif" 
                     alt="GET LOUD GIF" 
-                    width={700} 
-                    height={394} 
+                    width={200} 
+                    height={113} 
                     className="w-full h-full object-cover"
                     />
                 </div>
@@ -92,8 +92,8 @@ const Gallery = () => {
                     <Image 
                     src="/Studio_Lighting.gif" 
                     alt="Studio Lighting GIF" 
-                    width={1920} 
-                    height={1080} 
+                    width={300} 
+                    height={169} 
                     className="w-full h-full object-cover"
                     />
                 </div>

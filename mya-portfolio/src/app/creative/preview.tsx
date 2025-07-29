@@ -10,8 +10,8 @@ const Preview = () => {
                     <Image 
                         src="/LOCK-IT-DOWN-LACROSSE.gif" 
                         alt="LOCK IT DOWN GIF" 
-                        width={700} 
-                        height={394} 
+                        width={200} 
+                        height={113} 
                         className="w-full h-full object-cover"
                         priority
                         />
@@ -29,8 +29,8 @@ const Preview = () => {
                     <Image 
                     src="/GET-LOUD.gif" 
                     alt="GET LOUD GIF" 
-                    width={700} 
-                    height={394} 
+                    width={200} 
+                    height={113} 
                     className="w-full h-full object-cover"
                     />
                 </div>
