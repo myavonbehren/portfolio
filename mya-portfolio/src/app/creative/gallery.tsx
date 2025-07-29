@@ -112,6 +112,24 @@ const Gallery = () => {
                     />
                 </div>
                 <div className="aspect-video">
+                    <Image 
+                    src="/GoStemPersona1.png" 
+                    alt="UX Persona Student" 
+                    width={300} 
+                    height={169} 
+                    className="w-full h-full object-cover"
+                    />
+                </div>
+                <div className="aspect-video">
+                    <Image 
+                    src="/GoStemPersona2.png" 
+                    alt="UX Persona Manager" 
+                    width={300} 
+                    height={169} 
+                    className="w-full h-full object-cover"
+                    />
+                </div>
+                <div className="aspect-video">
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/hXSlsmjg_9E?si=s58NT1OVM7X6zPst" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </div>
                 <div className="aspect-video">
