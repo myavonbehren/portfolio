@@ -16,6 +16,7 @@ const Footer = () => {
                         <Link href="/#experience">Experience</Link>
                         <Link href="/#projects">Projects</Link>
                         <Link href="/#about">About</Link>
+                        <Link href="/creative">Creative</Link>
                     </ul>
                 </div>
 
@@ -29,7 +30,6 @@ const Footer = () => {
                             GitHub
                         </a>
                         <a href="mailto:myakvb@gmail.com" target="_blank">Email</a>
-                        <Link href="/creative">Creative</Link>
                     </ul>
                 </div>
                 </div>
