@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image";
+import Link from "next/link";
 
 const Gallery = () => {
     return (
@@ -112,22 +113,30 @@ const Gallery = () => {
                     />
                 </div>
                 <div className="aspect-video">
-                    <Image 
+                    <Link href="https://github.com/myavonbehren/GoStem-Employee-Website/tree/main?tab=readme-ov-file#ux-personas"
+                    target="_blank">
+                        <Image 
                     src="/GoStemPersona1.png" 
                     alt="UX Persona Student" 
-                    width={300} 
-                    height={169} 
+                    width={960} 
+                    height={540} 
                     className="w-full h-full object-cover"
                     />
+                    </Link>
+                    
                 </div>
                 <div className="aspect-video">
-                    <Image 
+                    <Link href="https://github.com/myavonbehren/GoStem-Employee-Website/tree/main?tab=readme-ov-file#ux-personas"
+                    target="_blank">
+                    <Image
                     src="/GoStemPersona2.png" 
                     alt="UX Persona Manager" 
-                    width={300} 
-                    height={169} 
+                    width={960} 
+                    height={540} 
                     className="w-full h-full object-cover"
                     />
+                    </Link>
+                    
                 </div>
                 <div className="aspect-video">
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/hXSlsmjg_9E?si=s58NT1OVM7X6zPst" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
