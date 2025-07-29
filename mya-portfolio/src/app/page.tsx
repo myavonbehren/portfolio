@@ -4,6 +4,7 @@ import Projects from "./_components/projects/projects";
 import Container from "./_components/container";
 import About from "./_components/about/about";
 import Footer from "./_components/footer";
+import Preview from "./creative/preview";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
           <Container>
             <Experience></Experience>
             <Projects></Projects>
+            <Preview></Preview>
             <About></About>
           </Container>
           <Footer></Footer>
