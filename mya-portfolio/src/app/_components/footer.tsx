@@ -12,10 +12,10 @@ const Footer = () => {
                 <div className="flex flex-col gap-3">
                     <h3 className="fluid-m font-semibold">Quick Links</h3>
                     <ul className="flex flex-col gap-2 fluid-m">
-                        <Link href="#hero">Home</Link>
-                        <Link href="#experience">Experience</Link>
-                        <Link href="#projects">Projects</Link>
-                        <Link href="#about">About</Link>
+                        <Link href="/#hero">Home</Link>
+                        <Link href="/#experience">Experience</Link>
+                        <Link href="/#projects">Projects</Link>
+                        <Link href="/#about">About</Link>
                     </ul>
                 </div>
 
@@ -29,9 +29,7 @@ const Footer = () => {
                             GitHub
                         </a>
                         <a href="mailto:myakvb@gmail.com" target="_blank">Email</a>
-                        <a href="https://www.youtube.com/@myavonbehren" target="_blank">
-                            YouTube
-                        </a>
+                        <Link href="/creative">Creative</Link>
                     </ul>
                 </div>
                 </div>
