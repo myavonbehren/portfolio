@@ -4,8 +4,7 @@ import Image from "next/image";
 const Gallery = () => {
     return (
         <div>
-            <h1>Gallery</h1>
-            <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4 mt-5">
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4 pt-30 pb-5">
                 <div className="aspect-video">
                     <Image 
                         src="/LOCK-IT-DOWN-LACROSSE.gif" 
@@ -13,6 +12,7 @@ const Gallery = () => {
                         width={700} 
                         height={394} 
                         className="w-full h-full object-cover"
+                        priority
                         />
                 </div>
                 <div className="aspect-video">
