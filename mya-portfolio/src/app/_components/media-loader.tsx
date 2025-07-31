@@ -58,12 +58,12 @@ const MediaLoader = ({
 
   if (isVideo) {
     return (
-      <div className={`aspect-video ${className}`}>
+      <div className={`aspect-video relative ${className}`}>
         {isLoading && (
           <LoadingSkeleton 
             aspectRatio={aspectRatio}
             customAspectRatio={customAspectRatio}
-            className="absolute inset-0 z-10"
+            className="absolute inset-0 z-10 pointer-events-none"
           />
         )}
         <iframe
@@ -82,12 +82,12 @@ const MediaLoader = ({
   }
 
   return (
-    <div className={`aspect-video ${className}`}>
+    <div className={`aspect-video relative ${className}`}>
       {isLoading && (
         <LoadingSkeleton 
           aspectRatio={aspectRatio}
           customAspectRatio={customAspectRatio}
-          className="absolute inset-0 z-10"
+          className="absolute inset-0 z-10 pointer-events-none"
         />
       )}
       <Image
