@@ -49,7 +49,7 @@ const MediaLoader = ({
     return (
       <div className={`aspect-video bg-red-50 border-2 border-red-200 rounded-lg flex items-center justify-center ${className}`}>
         <div className="text-center">
-          <div className="text-red-500 text-lg mb-2">⚠️</div>
+          <div className="text-red-500 text-lg mb-2">😔</div>
           <div className="text-red-600 text-sm">Failed to load media</div>
         </div>
       </div>
