@@ -132,12 +132,6 @@ const Gallery = () => {
                     isVideo={true}
                     videoTitle="YouTube video player"
                 />
-                <MediaLoader 
-                    src="https://www.youtube.com/embed/qWA0EkAWXlI?si=G6C5M2HDf_4BknFJ"
-                    alt="YouTube video player"
-                    isVideo={true}
-                    videoTitle="YouTube video player"
-                />
             </div>
         </div>
     )
