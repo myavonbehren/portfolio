@@ -3,6 +3,7 @@ import { hanken_grotesk } from '@/app/_components/font';
 import Navbar from '@/app/_components/navbar';
 import { ThemeProvider } from '@/providers/ThemeProviders';
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/next';
 
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
             {children}
+            <Analytics />
         </ThemeProvider>
       </body>
     </html>
