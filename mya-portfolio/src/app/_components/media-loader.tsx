@@ -15,6 +15,7 @@ interface MediaLoaderProps {
   videoTitle?: string;
   aspectRatio?: 'video' | 'square' | 'custom';
   customAspectRatio?: string;
+  caption?: string;
 }
 
 const MediaLoader = ({
@@ -28,7 +29,8 @@ const MediaLoader = ({
   isVideo = false,
   videoTitle = "Video player",
   aspectRatio = 'video',
-  customAspectRatio
+  customAspectRatio,
+  caption
 }: MediaLoaderProps) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -101,6 +103,7 @@ const MediaLoader = ({
         onLoad={handleLoad}
         onError={handleError}
       />
+      <p className="text-sm text-white pt-1">{caption}</p>
     </div>
   );
 };
