@@ -103,7 +103,7 @@ const MediaLoader = ({
         onLoad={handleLoad}
         onError={handleError}
       />
-      <p className="text-sm pt-1">{caption}</p>
+      <p className="text-sm pt-1 text-gray-600 dark:text-gray-300">{caption}</p>
     </div>
   );
 };
