@@ -1,6 +1,7 @@
 "use client";
 import Dpulogo from "../svg/dpulogo";
 import Nulogo from "../svg/nulogo";
+import { GiStealthBomber } from "react-icons/gi";
 import { GrPersonalComputer } from "react-icons/gr";
 import { useEffect, useState } from "react";
 
@@ -22,22 +23,23 @@ function useMediaQuery(query: string) {
 
 export default function LogoDisplay({ icon }: { icon: string }) {
   const isMdUp = useMediaQuery("(min-width: 768px)");
+  
   if (!isMdUp) return null;
-  if (icon === "dpulogo") 
-    return (
-  <div className="inline-flex flex-row items-center justify-center p-5 btn-base">
-    <Dpulogo className="w-6 h-6" />
-    </div>
-    )
-  if (icon === "nulogo") return (
+
+  const logoComponents = {
+    dpulogo: Dpulogo,
+    nulogo: Nulogo,
+    freelance: GrPersonalComputer,
+    ninja: GiStealthBomber
+  };
+
+  const LogoComponent = logoComponents[icon as keyof typeof logoComponents];
+  
+  if (!LogoComponent) return null;
+
+  return (
     <div className="inline-flex flex-row items-center justify-center p-5 btn-base">
-    <Nulogo className="w-6 h-6" />
+      <LogoComponent className="w-6 h-6" />
     </div>
-    )
-  if (icon === "freelance") return (
-    <div className="inline-flex flex-row items-center justify-center p-5 btn-base">
-    <GrPersonalComputer className="w-6 h-6" />
-    </div>
-    )
-  return null;
+  );
 }

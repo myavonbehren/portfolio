@@ -13,16 +13,6 @@ const Hero = () => {
         <h1 className="font-bold uppercase fluid-xxxl text-center">Full Stack <br /> Developer</h1>
         <h3 className="font-bold fluid-l text-center">Based near Asheville, NC</h3>
         <div className="flex items-center gap-3 pt-3 justify-center">
-            <a 
-            href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:42f4b55c-d400-4d18-a7b6-86465f6a8e89"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-base px-5 py-2.5 font-bold transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-                <div className="flex items-center gap-2">
-                    Resume
-                    <FiArrowRight className="w-4 h-4"/>
-                </div>
-            </a>
             <a
             href="https://www.linkedin.com/in/myavonbehren"
             target="_blank"
