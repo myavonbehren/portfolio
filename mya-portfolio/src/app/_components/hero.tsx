@@ -1,7 +1,6 @@
 import { FiLinkedin } from "react-icons/fi";
 import { FiGithub } from "react-icons/fi";
 import { FiMail } from "react-icons/fi";
-import { FiArrowRight } from "react-icons/fi";
 import { TbMovie } from "react-icons/tb";
 import Link from "next/link";
 
