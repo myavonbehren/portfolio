@@ -4,9 +4,10 @@ export async function fetchWork() {
     try {
         const work = await prisma.works.findMany(
             {
-                orderBy: {
-                    startDate: 'desc'
-                }
+                orderBy: [
+                    { endDate: { sort: 'asc', nulls: 'first' } }, 
+                    { startDate: 'desc' }
+                  ]
             }
         );
         return work;
