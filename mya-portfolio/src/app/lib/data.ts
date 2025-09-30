@@ -5,7 +5,7 @@ export async function fetchWork() {
         const work = await prisma.works.findMany(
             {
                 orderBy: [
-                    { endDate: { sort: 'asc', nulls: 'first' } }, 
+                    { endDate: { sort: 'desc', nulls: 'first' } }, 
                     { startDate: 'desc' }
                   ]
             }
