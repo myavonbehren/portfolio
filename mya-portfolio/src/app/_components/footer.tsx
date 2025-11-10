@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
+        <div className="bg-footer">
         <footer className="p-6">
             <div className="container-base">
                 <div className="flex flex-row justify-between p-10">
@@ -38,8 +39,8 @@ const Footer = () => {
 
             </div>
             <p className="fluid-m text-right opacity-50 pr-10 pt-3">© 2025 Mya Von Behren</p>
-        </footer>
-       
+                </footer>
+            </div>
     )
 }
 
