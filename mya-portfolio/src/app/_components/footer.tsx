@@ -13,24 +13,24 @@ const Footer = () => {
                 <div className="flex flex-col gap-3">
                     <h3 className="fluid-m font-semibold">Quick Links</h3>
                     <ul className="flex flex-col gap-2 fluid-m">
-                        <Link href="/#hero">Home</Link>
-                        <Link href="/#experience">Experience</Link>
-                        <Link href="/#projects">Projects</Link>
-                        <Link href="/#about">About</Link>
-                        <Link href="/creative">Creative</Link>
+                        <Link href="/#hero" className="hover:scale-105 transition-all duration-300 ease-in-out">Home</Link>
+                        <Link href="/#experience" className="hover:scale-105 transition-all duration-300 ease-in-out">Experience</Link>
+                        <Link href="/#projects" className="hover:scale-105 transition-all duration-300 ease-in-out">Projects</Link>
+                        <Link href="/#about" className="hover:scale-105 transition-all duration-300 ease-in-out">About</Link>
+                        <Link href="https://creative.myavonbehren.com/" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-all duration-300 ease-in-out">Creative</Link>
                     </ul>
                 </div>
 
                 <div className="flex flex-col gap-3">
                     <h3 className="fluid-m font-semibold">Socials</h3>
                     <ul className="flex flex-col gap-2 fluid-m">
-                        <a href="https://www.linkedin.com/in/myavonbehren" target="_blank">
+                        <a href="https://www.linkedin.com/in/myavonbehren" target="_blank" className="hover:scale-105 transition-all duration-300 ease-in-out">
                             LinkedIn
                         </a>
-                        <a href="https://github.com/myavonbehren" target="_blank">
+                        <a href="https://github.com/myavonbehren" target="_blank" className="hover:scale-105 transition-all duration-300 ease-in-out">
                             GitHub
                         </a>
-                        <a href="mailto:myakvb@gmail.com" target="_blank">Email</a>
+                        <a href="mailto:myakvb@gmail.com" target="_blank" className="hover:scale-105 transition-all duration-300 ease-in-out">Email</a>
                     </ul>
                 </div>
                 </div>
