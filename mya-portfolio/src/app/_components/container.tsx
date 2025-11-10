@@ -1,9 +1,10 @@
 type Props = {
     children?: React.ReactNode;
+    bg?: string;
   };
   
-  const Container = ({ children }: Props) => {
-    return <div className="container mx-auto px-10">{children}</div>;
+  const Container = ({ children, bg }: Props) => {
+    return <div className={`container mx-auto px-10 ${bg}`}>{children}</div>;
   };
   
   export default Container;
