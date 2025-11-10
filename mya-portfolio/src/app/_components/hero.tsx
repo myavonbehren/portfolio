@@ -55,7 +55,7 @@ const Hero = () => {
             className="btn-base p-2.5 inline-flex items-center transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">                
                 <FiGithub className="w-6 h-6"/>
             </a>
-            <Link href="/creative" className="btn-base p-2.5 inline-flex items-center transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+            <Link href="https://creative.myavonbehren.com/" target="_blank" rel="noopener noreferrer" className="btn-base p-2.5 inline-flex items-center transition delay-10 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
                 <TbMovie className="w-6 h-6"/>
             </Link>
             <a href="mailto:myakvb@gmail.com"
