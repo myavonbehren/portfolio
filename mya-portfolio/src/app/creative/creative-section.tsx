@@ -7,7 +7,7 @@ const CreativeSection = () => {
             <Container>
                 <div className="flex flex-col justify-start py-20 gap-5" id="about">
                     <CreativeContent>
-                        <p className="fluid-m">When I'm not building applications, I'm creating motion graphics and visual effects that combine technical precision with creative storytelling.</p>
+                        <p className="fluid-m">When I&apos;m not building applications, I&apos;m creating motion graphics and visual effects that combine technical precision with creative storytelling.</p>
                         <a
                             href="https://creative.myavonbehren.com/"
                             target="_blank"
