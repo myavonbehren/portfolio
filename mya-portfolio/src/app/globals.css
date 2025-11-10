@@ -57,9 +57,72 @@ html.light {
 /* Light mode gradients (default) */
 .bg-gradient-hero {
   background: 
-  radial-gradient(70.75% 67.36% at 50% 50%, rgba(250, 249, 246, 0.40) 0%, rgba(231, 223, 198, 0.40) 27%, rgba(208, 197, 243, 0.40) 60%, rgba(157, 134, 239, 0.40) 87%, rgba(98, 60, 234, 0.40) 100%), 
+  radial-gradient(70.75% 67.36% at 50% 50%, rgba(250, 249, 246, 0.40) 0%, rgba(231, 223, 198, 0.40) 27%, rgba(208, 197, 243, 0.40) 60%, #9d86ef66 87%, #623cea66 100%), 
   linear-gradient(0deg, #FAF9F6 0%, #E9F1F7 20%, #E7DFC6 45%, #E7DFC6 55%, #E9F1F7 76%, #FAF9F6 100%), 
   #FAF9F6;
+}
+
+/* Hero section gradient - light mode */
+.bg-hero-gradient {
+  background: linear-gradient(to top, rgba(98, 60, 234, 0.7) 0%, #E7DFC6 100%);
+}
+
+/* Hero section gradient - dark mode */
+html.dark .bg-hero-gradient {
+  /*background: linear-gradient(to bottom, #623CEA 100%, #000000 100%,);*/
+  background: linear-gradient(to bottom, rgba(98, 60, 234, 1) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+/* System preference dark mode fallback */
+@media (prefers-color-scheme: dark) {
+  html:not(.light) .bg-hero-gradient {
+    background: linear-gradient(to bottom, rgba(98, 60, 234, 1) 0%, rgba(0, 0, 0, 0.5) 100%);
+
+  }
+}
+
+/* Experience section gradient - light mode */
+.bg-experience-gradient {
+  background: linear-gradient(to bottom, rgba(98, 60, 234, 0.7) 0%, #E7DFC6 100%);
+}
+
+/* Experience section gradient - dark mode */
+html.dark .bg-experience-gradient {
+  background: linear-gradient(to top, rgba(98, 60, 234, 1) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+/* System preference dark mode fallback */
+@media (prefers-color-scheme: dark) {
+  html:not(.light) .bg-experience-gradient {
+    background: linear-gradient(to top, rgba(98, 60, 234, 1) 0%, rgba(0, 0, 0, 0.5) 100%);
+  }
+}
+
+/* Projects section background - light mode */
+.bg-projects {
+  background-color: #E7DFC6;
+}
+
+/* Projects section background - dark mode */
+html.dark .bg-projects {
+  background-color: #623CEA;
+}
+
+/* System preference dark mode fallback */
+@media (prefers-color-scheme: dark) {
+  html:not(.light) .bg-projects {
+    background-color: #623CEA;
+  }
+}
+
+/* Footer background - light mode */
+.bg-footer {
+  background-color: rgba(98, 60, 234, 0.7);
+}
+
+/* Footer background - dark mode */
+html.dark .bg-footer {
+  background-color: black;
 }
 
 .bg-gradient {
