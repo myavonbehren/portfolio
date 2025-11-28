@@ -22,5 +22,4 @@ const CreativeSection = () => {
         </div>
     )
 }
-
 export default CreativeSection;
