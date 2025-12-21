@@ -19,15 +19,7 @@ const ProjectsContent = ({ children }: ProjectsContentProps) => {
       >
         Projects
       </motion.h1>
-      <motion.div 
-        className="w-full justify-center items-center"
-        initial={{ opacity: 0, filter: "blur(5px)" }}
-        whileInView={{ opacity: 1, filter: "blur(0px)" }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-      >
-        {children}
-      </motion.div>
+      {children}
     </>
   );
 };
