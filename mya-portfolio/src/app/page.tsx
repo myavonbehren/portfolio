@@ -3,7 +3,7 @@ import Experience from "./_components/experience/experience";
 import Projects from "./_components/projects/projects";
 import About from "./_components/about/about";
 import Footer from "./_components/footer";
-import CreativeSection from "./creative/creative-section";
+import CreativeSection from "./_creative/creative-section";
 
 export default function Home() {
   return (
@@ -14,7 +14,6 @@ export default function Home() {
             <CreativeSection></CreativeSection>
             <About></About>
           <Footer></Footer>
-        
     </main>
   );
 }

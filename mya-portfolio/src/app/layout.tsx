@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { hanken_grotesk } from '@/app/_components/font';
 import Navbar from '@/app/_components/navbar';
 import { ThemeProvider } from '@/providers/ThemeProviders';
-import "./globals.css";
+import "./global.css";
 import { Analytics } from '@vercel/analytics/next';
 
 
@@ -21,12 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${hanken_grotesk.className} ${hanken_grotesk.className} antialiased`}>
+      <body>
+      <div className={`${hanken_grotesk.className} antialiased`}>
         <ThemeProvider>
           <Navbar />
             {children}
             <Analytics />
         </ThemeProvider>
+      </div>
       </body>
     </html>
   );
