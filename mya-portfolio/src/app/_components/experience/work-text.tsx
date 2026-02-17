@@ -16,17 +16,16 @@ const description = (description: string) => {
 const WorkText = async () => {
   const work = await fetchWork();
   return (
-    <div className="px-11 pt-11 pb-6">
+    <div className="px-11 pt-11 pb-6 flex flex-col">
       {work.map((job: Work) => (
-        <div className="inline-flex flex-row items-center justify-center gap-4 pb-5 " key={job.id}>
+        <div className="inline-flex flex-row gap-4 pb-5 " key={job.id}>
             {job.icon && <LogoDisplay icon={job.icon} />}
           <div className="inline-flex flex-col pb-1">
-            <div className="font-semibold">
+            <div className="font-semibold fluid-s">
               {formatDate(job.startDate)} - {formatDate(job.endDate)}
               <p className="fluid-m">{job.title}</p>
               <p className="fluid-s">{job.company}</p>
             </div>
-            {description(job.description)}
           </div>
         </div>
       ))}

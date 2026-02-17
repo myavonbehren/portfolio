@@ -33,7 +33,7 @@ const Hero = () => {
           animate={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
         >
-          Based near Asheville, NC
+          Based in United States
         </motion.h3>
         <motion.div 
           className="flex items-center gap-3 pt-3 justify-center"
