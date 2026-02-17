@@ -6,12 +6,13 @@ const formatDate = (date?: Date | null) => {
   if (!date) return "Present";
   return new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
 };
-
+/*
 const description = (description: string) => {
   return description.split('*').map((line, index) => (
     <p key={index} className="fluid-s pl-2">• {line}</p>
   ));
 };
+*/
 
 const WorkText = async () => {
   const work = await fetchWork();
