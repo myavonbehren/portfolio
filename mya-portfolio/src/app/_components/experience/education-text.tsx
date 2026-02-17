@@ -16,7 +16,7 @@ const EducationText = async () => {
         <div className="inline-flex flex-row items-center justify-center gap-4" key={bs.id}>
           {bs.icon && <LogoDisplay icon={bs.icon} />}
           <div className="inline-flex flex-col pb-1">
-            <div className="font-semibold">
+            <div className="font-semibold fluid-s">
               {formatDate(bs.startDate)} - {formatDate(bs.endDate)}
               <p className="fluid-m">{bs.title}</p>
               <p className="fluid-s">{bs.company}</p>

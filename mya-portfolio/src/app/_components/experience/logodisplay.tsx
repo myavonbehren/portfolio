@@ -1,9 +1,9 @@
 "use client";
 import Dpulogo from "../svg/dpulogo";
 import Nulogo from "../svg/nulogo";
-import { GiStealthBomber } from "react-icons/gi";
 import { GrPersonalComputer } from "react-icons/gr";
 import { useEffect, useState } from "react";
+import POSTPALSlogo from "../svg/postpalslogo";
 
 function useMediaQuery(query: string) {
   const [matches, setMatches] = useState(false);
@@ -30,7 +30,7 @@ export default function LogoDisplay({ icon }: { icon: string }) {
     dpulogo: Dpulogo,
     nulogo: Nulogo,
     freelance: GrPersonalComputer,
-    ninja: GiStealthBomber
+    postpal: POSTPALSlogo
   };
 
   const LogoComponent = logoComponents[icon as keyof typeof logoComponents];
