@@ -4,6 +4,7 @@ import Nulogo from "../svg/nulogo";
 import { GrPersonalComputer } from "react-icons/gr";
 import { useEffect, useState } from "react";
 import POSTPALSlogo from "../svg/postpalslogo";
+import Lewerlogo from "../svg/lewerlogo";
 
 function useMediaQuery(query: string) {
   const [matches, setMatches] = useState(false);
@@ -30,7 +31,8 @@ export default function LogoDisplay({ icon }: { icon: string }) {
     dpulogo: Dpulogo,
     nulogo: Nulogo,
     freelance: GrPersonalComputer,
-    postpal: POSTPALSlogo
+    postpal: POSTPALSlogo,
+    lewer: Lewerlogo
   };
 
   const LogoComponent = logoComponents[icon as keyof typeof logoComponents];
