@@ -10,7 +10,7 @@ const strokeStyle = {
     fill: "none" as const,
     stroke: "var(--foreground)",
     strokeMiterlimit: 20 as const,
-    strokeWidth: 17,
+    strokeWidth: 10,
 };
 
 export default function Lewerlogo({

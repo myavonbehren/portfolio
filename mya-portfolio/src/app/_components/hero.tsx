@@ -25,7 +25,7 @@ const Hero = () => {
           animate={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
-          Full Stack <br /> Developer
+          Software <br /> Developer
         </motion.h1>
         <motion.h3 
           className="font-bold fluid-l text-center"
