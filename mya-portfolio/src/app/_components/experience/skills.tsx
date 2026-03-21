@@ -139,7 +139,7 @@ const Skills = ({ skills }: SkillsProps) => {
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
                 >
-                    <h3 className="fluid-m font-bold">Design</h3>
+                    <h3 className="fluid-m font-bold">Design and Creative Tools</h3>
                     <div className="flex flex-wrap gap-1 w-full md:flex-wrap">
                         {skills.map((skill: SkillsType) => (
                             Design(skill.design)
